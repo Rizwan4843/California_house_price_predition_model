@@ -40,7 +40,7 @@ ss=StandardScaler()
 ss.fit(temp_df[col])
 final_value=ss.transform([all_Value])
 
-with open("House_price_pred_ridge_model.pkl (1)","rb")as f:
+with open("House_price_pred_ridge_model.pkl,"rb")as f:
     chatgpt=pickle.load(f)
 
 price=chatgpt.predict(final_value)[0]*1000000
@@ -65,3 +65,4 @@ else:
     body="Incalid House feature"
 
     st.warning(body)
+
